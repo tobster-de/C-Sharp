@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>App8_Core3</AssemblyName>
+    <RootNamespace>AppCore</RootNamespace>
+  </PropertyGroup>
+
+</Project>

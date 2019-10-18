@@ -1,28 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace App
 {
-
-
     class UsingDecl
     {
         class MyDisposable : IDisposable
         {
+            public bool IsDisposed { get; private set; }
+
             public void Dispose()
             {
+                this.IsDisposed = true;
             }
         }
 
+        static MyDisposable _disposable;
 
-        void Something()
+        public static void UseAndDispose()
         {
             using var disp = new MyDisposable();
+            _disposable = disp;
 
+            Console.WriteLine("IsDisposed: " + disp.IsDisposed); // false
         }
-
+        
+        public static void CheckDisposal()
+        {
+            Console.WriteLine("IsDisposed: " + _disposable.IsDisposed);  // true
+        }
     }
 }

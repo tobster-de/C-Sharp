@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using App;
-
-namespace ConsoleApp2
+﻿namespace App
 {
     class Program
     {
         static void Main(string[] args)
         {
-            StaticLocalFunction slf = new StaticLocalFunction();
+            //StaticLocalFunction slf = new StaticLocalFunction();
+            //slf.MethodWithStaticLocalFunction(4711);
 
-            slf.MethodWithStaticLocalFunction(4711);
+            // ReadonlyMembers rm = new ReadonlyMembers();
+            // rm.UseReadonlyMember();
+            
+            // UsingDecl.UseAndDispose();
+            // UsingDecl.CheckDisposal();
+            
+            //NullCoalescingAssignment.Assign();
         }
     }
 }
